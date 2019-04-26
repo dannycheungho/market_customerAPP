@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.danny.customerapp">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/japancandy"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar"
+
+            >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+
+        </activity>
+
+        <activity android:name=".SuccessActivity" android:theme="@style/AppTheme.NoActionBar" >
+
+        </activity>
+        <activity android:name=".ProfileActivity"  android:theme="@style/AppTheme"
+            android:parentActivityName="com.example.danny.customerapp.SuccessActivity"
+            android:label="個人檔案修改">
+        </activity>
+        <activity android:name=".Promotion" android:theme="@style/AppTheme"
+            android:parentActivityName="com.example.danny.customerapp.SuccessActivity"
+            android:label="最新推廣優惠">
+        </activity>
+        <activity android:name=".BalanceActivity" android:theme="@style/AppTheme"
+            android:parentActivityName="com.example.danny.customerapp.SuccessActivity"
+            android:label="結餘"
+            >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+    </activity>
+        <activity android:name=".TradeActivity"   android:theme="@style/AppTheme"
+            android:label="積分兌換"
+            android:parentActivityName="com.example.danny.customerapp.SuccessActivity">
+        </activity>
+        <activity android:name=".PaymentRecordActivity"  android:theme="@style/AppTheme"
+            android:label="交易記錄"
+            android:parentActivityName="com.example.danny.customerapp.SuccessActivity" >
+        </activity>
+        <activity android:name=".VaildRecordActivity"  android:theme="@style/AppTheme"
+            android:label="認證付款"
+            android:parentActivityName="com.example.danny.customerapp.SuccessActivity" >
+        </activity>
+        <activity android:name=".register"  android:theme="@style/AppTheme"
+            android:parentActivityName="com.example.danny.customerapp.MainActivity">
+        </activity>
+        <activity android:name=".MemberShipCard" android:theme="@style/AppTheme"
+            android:label="會員卡"
+            android:parentActivityName="com.example.danny.customerapp.SuccessActivity" >
+        </activity>
+        <activity android:name=".Test" android:theme="@style/AppTheme"
+            android:label="確定交易"
+            android:parentActivityName="com.example.danny.customerapp.SuccessActivity" >
+            >
+
+        </activity>
+
+
+
+
+
+    </application>
+
+</manifest>
